@@ -45,8 +45,8 @@ public class BizClassLoader extends AbstractClasspathClassloader {
 
         // 1. sun reflect related class throw exception directly
         if (classloaderService.isSunReflectClass(name)) {
-            throw ArkLoaderException.getBizLoaderException(
-                String
+            throw ArkLoaderException
+                .getBizLoaderException(String
                     .format(
                         "[ArkBiz Loader] %s : can not load class: %s, this class can only be loaded by sun.reflect.DelegatingClassLoader",
                         bizIdentity, name));
@@ -87,8 +87,8 @@ public class BizClassLoader extends AbstractClasspathClassloader {
             return clazz;
         }
 
-        throw ArkLoaderException.getBizLoaderException(String.format("[ArkBiz Loader] %s : can not load class: %s",
-            bizIdentity, name));
+        throw ArkLoaderException.getBizLoaderException(String.format(
+            "[ArkBiz Loader] %s : can not load class: %s", bizIdentity, name));
     }
 
     @SuppressWarnings("unchecked")

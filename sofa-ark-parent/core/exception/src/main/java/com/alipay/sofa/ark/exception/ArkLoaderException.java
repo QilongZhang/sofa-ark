@@ -24,10 +24,10 @@ package com.alipay.sofa.ark.exception;
  */
 public class ArkLoaderException extends ClassNotFoundException {
 
-    private static ArkLoaderException bizLoaderException = new ArkLoaderException("");
+    private static ArkLoaderException bizLoaderException    = new ArkLoaderException("");
     private static ArkLoaderException pluginLoaderException = new ArkLoaderException("");
 
-    private String detailMessage;
+    private String                    detailMessage;
 
     public ArkLoaderException(String s) {
         super(s);

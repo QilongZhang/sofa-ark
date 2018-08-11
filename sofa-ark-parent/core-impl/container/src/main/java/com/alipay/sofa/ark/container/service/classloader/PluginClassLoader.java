@@ -49,8 +49,8 @@ public class PluginClassLoader extends AbstractClasspathClassloader {
 
         // 1. sun reflect related class throw exception directly
         if (classloaderService.isSunReflectClass(name)) {
-            throw ArkLoaderException.getPluginLoaderException(
-                String
+            throw ArkLoaderException
+                .getPluginLoaderException(String
                     .format(
                         "[ArkPlugin Loader] %s : can not load class: %s, this class can only be loaded by sun.reflect.DelegatingClassLoader",
                         pluginName, name));
